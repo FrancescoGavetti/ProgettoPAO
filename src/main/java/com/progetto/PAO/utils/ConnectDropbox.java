@@ -26,7 +26,7 @@ public class ConnectDropbox {
 					+ "    \"include_mounted_folders\": true,\r\n" + "    \"include_non_downloadable_files\": true\r\n"
 					+ "}";
             /*String jsonBody = "{\r\n" +
-                    "    \"path\": \"/Photos/Sample Album/img001.jpg\",\r\n" +
+                    "    \"path\": \"/Photos/Sample Album/img001.jpg\",\r\n"
                     "    \"include_media_info\": true,\r\n" +
                     "    \"include_deleted\": false,\r\n" +
                     "    \"include_has_explicit_shared_members\": false\r\n" +

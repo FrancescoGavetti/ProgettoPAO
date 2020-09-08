@@ -1,6 +1,5 @@
 package com.progetto.PAO.utils;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.*;
@@ -15,13 +14,15 @@ public class ConnectDropbox {
             HttpURLConnection openConnection = (HttpURLConnection) new URL(url).openConnection();
             openConnection.setRequestMethod(method);
             openConnection.setRequestProperty("Authorization", token);
-            openConnection.setRequestProperty("Content-Type", "application/json");
             openConnection.setRequestProperty("Accept", "application/json");
             openConnection.setDoOutput(true);
 
-            try (OutputStream os = openConnection.getOutputStream()) {
-                byte[] input = body.getBytes("utf-8");
-                os.write(input, 0, input.length);
+            if(body != null) {
+                openConnection.setRequestProperty("Content-Type", "application/json");
+                try (OutputStream os = openConnection.getOutputStream()) {
+                    byte[] input = body.getBytes("utf-8");
+                    os.write(input, 0, input.length);
+                }
             }
 
             InputStream in = openConnection.getInputStream();
@@ -34,7 +35,6 @@ public class ConnectDropbox {
 
                 while ((line = buf.readLine()) != null) {
                     data += line;
-                    System.out.println(line);
                 }
             } finally {
                 in.close();

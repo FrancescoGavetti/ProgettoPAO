@@ -6,6 +6,7 @@ import com.progetto.PAO.utils.ConnectDropbox;
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -34,9 +35,38 @@ public class DropboxController {
         return obj.toString();
     }
 
-//ok funziona, filtrare per tag in caso
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
-    HashMap<String, List<File>> getAllFiles() {
+    HashMap<String, List<File>> getAllFiles(
+            @RequestParam(value = "tag", required = false, defaultValue = "") String tag
+    ) {
+        String url = "https://api.dropboxapi.com/2/files/list_folder";
+        String token = "Bearer n06rPalf7Y8AAAAAAAAAAeL51ouBne0M2e78SzvwS4BdMpirjDTdmnC_dB72DUOU";
+        String method = "POST";
+        String body = "{\r\n" + "    \"path\": \"\",\r\n" + "    \"recursive\": true,\r\n"
+                + "    \"include_media_info\": true,\r\n" + "    \"include_deleted\": false,\r\n"
+                + "    \"include_has_explicit_shared_members\": false,\r\n"
+                + "    \"include_mounted_folders\": true,\r\n" + "    \"include_non_downloadable_files\": true\r\n"
+                + "}";
+        JSONObject obj = ConnectDropbox.request(url, method, token, body);
+        HashMap<String, List<File>> map = Parser.JsonToFile(obj);
+        if(tag.isEmpty()){
+            return map;
+        }else{
+            HashMap<String, List<File>> newMap = new HashMap<String, List<File>>();
+            if(map.get(tag) == null){
+                newMap.put("tag non trovata",map.get(tag));
+                return newMap;
+            }else{
+                newMap.put(tag,map.get(tag));
+                return newMap;
+            }
+
+        }
+
+    }
+
+    @RequestMapping(value = "/statistic", method = RequestMethod.GET, produces = "application/json")
+    HashMap<String, List<File>> getStatistics() {
         String url = "https://api.dropboxapi.com/2/files/list_folder";
         String token = "Bearer n06rPalf7Y8AAAAAAAAAAeL51ouBne0M2e78SzvwS4BdMpirjDTdmnC_dB72DUOU";
         String method = "POST";
@@ -49,4 +79,6 @@ public class DropboxController {
         HashMap<String, List<File>> map = Parser.JsonToFile(obj);
         return map;
     }
+
+
 }

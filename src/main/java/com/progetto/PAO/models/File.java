@@ -5,6 +5,7 @@ import org.json.JSONObject;
 
 
 public class File {
+
     private String tag;
     private String name;
     private String id;
@@ -94,9 +95,9 @@ public class File {
             this.tag = obj.getString(".tag");
             this.name = obj.getString("name");
             this.id = obj.getString("id");
-            if(!this.tag.equals("folder")){
+            if(!this.tag.equals("folder")){ //punto esclamativo per invertire la condizione bool
                 this.clientModified = obj.getString("client_modified");
-                this.serverModified = obj.getString("name");
+                this.serverModified = obj.getString("server_modified");
                 this.rev = obj.getString("rev");
                 this.size = obj.getInt("size");
             }else{
@@ -105,7 +106,6 @@ public class File {
                 this.rev = "None";
                 this.size = -1;
             }
-
             this.path = obj.getString("path_lower");
         } catch (JSONException e) {
             e.printStackTrace();

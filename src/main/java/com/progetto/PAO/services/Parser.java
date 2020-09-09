@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Parser {
 
-    static public HashMap<String, List<File>> JsonToFile(JSONObject obj){
+    public static HashMap<String, List<File>> JsonToFile(JSONObject obj){
         HashMap<String, List<File>> map = new HashMap<String, List<File>>();
         try {
             JSONArray entries = obj.getJSONArray("entries");

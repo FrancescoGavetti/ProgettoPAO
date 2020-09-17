@@ -1,16 +1,18 @@
 package com.progetto.PAO.models;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
+/***
+ *
+ */
 public class Statistic {
     private List<File> list;
     private int max;
     private int min;
+    private int sum;
     private int average;
-
-    public Statistic(List<File> list) {
-        this.list = list;
-    }
 
     public List<File> getList() {
         return list;
@@ -36,6 +38,10 @@ public class Statistic {
         this.min = min;
     }
 
+    public int getSum() { return sum; }
+
+    public void setSum(int sum) { this.sum = sum; }
+
     public int getAverage() {
         return average;
     }
@@ -44,12 +50,28 @@ public class Statistic {
         this.average = average;
     }
 
+    public Statistic(List<File> list) {
+        this.list = list;
+        this.max = list.get(0).getSize();
+        this.min = list.get(0).getSize();
+        for(int i=0; i<list.size(); i++){
+            int size = list.get(i).getSize();
+            this.sum += size;
+            if(list.get(i).getSize()>max)
+                this.max = list.get(i).getSize();
+            if(list.get(i).getSize()<min)
+                this.min = list.get(i).getSize();
+        }
+        this.average = (int)Math.round(sum/ list.size());
+    }
+
     @Override
     public String toString() {
         return "Statistic{" +
                 "list=" + list +
                 ", max=" + max +
                 ", min=" + min +
+                ", sum=" + sum +
                 ", average=" + average +
                 '}';
     }

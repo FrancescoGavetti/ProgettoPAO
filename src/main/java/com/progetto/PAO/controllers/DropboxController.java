@@ -14,7 +14,10 @@ import java.util.List;
 
 @RestController
 public class DropboxController {
-
+    /***
+     *
+     * @return
+     */
     @RequestMapping(value = "/usage", method = RequestMethod.GET, produces = "application/json")
     String getUsage() {
         String url = "https://api.dropboxapi.com/2/users/get_space_usage";
@@ -25,6 +28,10 @@ public class DropboxController {
         return obj.toString();
     }
 
+    /***
+     *
+     * @return
+     */
     @RequestMapping(value = "/count", method = RequestMethod.GET, produces = "application/json")
     String getCount() {
         String url = "https://api.dropboxapi.com/2/file_requests/count";
@@ -35,6 +42,11 @@ public class DropboxController {
         return obj.toString();
     }
 
+    /***
+     *
+     * @param tag
+     * @return
+     */
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
     HashMap<String, List<File>> getAllFiles(
             @RequestParam(value = "tag", required = false, defaultValue = "") String tag
@@ -65,6 +77,10 @@ public class DropboxController {
 
     }
 
+    /***
+     *
+     * @return
+     */
     @RequestMapping(value = "/statistic", method = RequestMethod.GET, produces = "application/json")
     HashMap<String, List<File>> getStatistics() {
         String url = "https://api.dropboxapi.com/2/files/list_folder";

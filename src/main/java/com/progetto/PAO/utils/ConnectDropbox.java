@@ -7,7 +7,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class ConnectDropbox {
-
+    /***
+     * Metodo statico per collegarsi a Dropbox API
+     * @param url l'url è importante per capire la tipologia di richiesta
+     * @param method può essere POST o GET
+     * @param token è il token univoco per accedere al mio account
+     * @param body !=null solo per richieste POST
+     * @return un JSON contenente le informazioni fornite dall'API
+     */
     public static JSONObject request(String url, String method, String token, String body){
         JSONObject obj = null;
         try {
@@ -47,3 +54,10 @@ public class ConnectDropbox {
         return obj;
     }
 }
+
+/*
+@startuml
+class Car{
+}
+@enduml
+* */

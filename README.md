@@ -14,7 +14,9 @@ L'applicazione permette di richiedere mediante API REST (GET) con rotte distinte
 
 ### Tecnologie utilizzate
 * GitHub: per versioning dell'applicazione;
-* IntellIJ: per lo sviluppo dell'applicazione
+* SpringBoot:
+* JavaScript:
+* Postman:
 
 ## Funzionamento
 ### Avvio dell'applicazione
@@ -26,19 +28,11 @@ Mediante richieste GET con rotte determinate, il client può richiedere determin
 
 * **Possibili statistiche**:
 
-
-## Packaging
-L'applicazione è composta da 4 packages:
-* **com.progetto.PAO.controllers** contiene la classe DropboxController la quale permette l'interazione tra l'utente e l'applicazione mediante l'utilizzo di metodi mappati mediante @RequestMapping;
-* **com.progetto.PAO.models** contiene la classe File che costituisce l'entità in grado di rappresentare le informazioni tornate dalle chiamate;
-* **com.progetto.PAO.services** contiene la classe Parser che permette di fare il parsing;
-* **com.progetto.PAO.utils**  contiene la classe ConnectDropbox, la quale consente di connettersi a Dropbox e fare le richieste.
-
 ## UML
 ### Class Diagram
 
 ### Use Case Diagram
-
+Riporta le funzioni che l'applicazione mette a disposizione dell'utente.
 ### Activity Diagram
 
 ### Sequence Diagram

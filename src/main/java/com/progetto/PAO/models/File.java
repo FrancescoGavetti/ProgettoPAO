@@ -3,7 +3,9 @@ package com.progetto.PAO.models;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
+/***
+ * Entità che mi permette di modellare gli oggetti restituiti da Dropbox API
+ */
 public class File {
 
     private String tag;

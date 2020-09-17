@@ -31,20 +31,6 @@ public class DropboxController {
 
     /***
      *
-     * @return
-     */
-    @RequestMapping(value = "/count", method = RequestMethod.GET, produces = "application/json")
-    String getCount() {
-        String url = "https://api.dropboxapi.com/2/file_requests/count";
-        String token = "Bearer n06rPalf7Y8AAAAAAAAAAeL51ouBne0M2e78SzvwS4BdMpirjDTdmnC_dB72DUOU";
-        String method = "POST";
-        String body = null;
-        JSONObject obj = ConnectDropbox.request(url, method, token, body);
-        return obj.toString();
-    }
-
-    /***
-     *
      * @param tag
      * @return
      */
@@ -73,9 +59,7 @@ public class DropboxController {
                 newMap.put(tag,map.get(tag));
                 return newMap;
             }
-
         }
-
     }
 
     /***
@@ -86,8 +70,7 @@ public class DropboxController {
     String getStatistics() {
         HashMap<String, List<File>> map = getAllFiles("file");
         Statistic statistic = new Statistic(map.get("file"));
-        return statistic.toString();
+        JSONObject json = statistic.toJson();
+        return json.toString();
     }
-
-
 }

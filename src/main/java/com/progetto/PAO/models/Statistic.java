@@ -1,7 +1,8 @@
 package com.progetto.PAO.models;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.List;
 
 /***
@@ -63,6 +64,19 @@ public class Statistic {
                 this.min = list.get(i).getSize();
         }
         this.average = (int)Math.round(sum/ list.size());
+    }
+
+    public JSONObject toJson(){
+        JSONObject json = new JSONObject();
+        try {
+            json.put("max", this.max);
+            json.put("min", this.min);
+            json.put("sum", this.sum);
+            json.put("average", this.average);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return json;
     }
 
     @Override

@@ -57,7 +57,7 @@ Esso mostra le varie azioni compiute dall'utente e dal sistema quando viene rich
 
 ![](getStatisticsSequenceDiagram.png)
     
-    Viene effettuata la richiesta GET al WebService e quest'ultimo effettua una richiesta POST all'API di Dropbox e l'oggetto restituito viene passato viene usato per istanziare la classe Statistic che calcola tutte le statistiche e le restituisce.
+    Viene effettuata la richiesta GET al WebService e quest'ultimo effettua una richiesta POST all'API di Dropbox e l'oggetto restituito viene passato per poi istanziare la classe Statistic che calcola tutte le statistiche e le restituisce.
 
 
 

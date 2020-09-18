@@ -30,27 +30,27 @@ Mediante richieste GET con rotte determinate, il client può richiedere determin
 
 ## UML
 ### Class Diagram
-   ![](classDiagram.png)
+![](classDiagram.png)
 ### Use Case Diagram
 Riporta le funzioni che l'applicazione mette a disposizione dell'utente.
-
+![](useCaseDiagram.png)
 ### Sequence Diagram
 
 * **getUsage()**
     
-    ![](getUsageSequenceDiagram.png)
+![](getUsageSequenceDiagram.png)
     
     Viene effettuata la richiesta GET al WebService e quest'ultimo effettua una richiestra POST all'API di Dropbox per richiedere l'utilizzo dati.
 
 * **getAllFiles**
 
-    ![](getAllFilesSequenceDiagram.png)
+![](getAllFilesSequenceDiagram.png)
     
     Viene effettuata la richiesta GET al WebService e quest'ultimo effettua una richiesta POST all'API di Dropbox per richiedere l'elenco di tutti i file e folder.
     
 * **getStatistics()**
 
-    ![](getStatisticsSequenceDiagram.png)
+![](getStatisticsSequenceDiagram.png)
     
     Viene effettuata la richiesta GET al WebService e quest'ultimo effettua una richiesta POST all'API di Dropbox e l'oggetto restituito viene passato viene usato per istanziare la classe Statistic che calcola tutte le statistiche e le restituisce.
 

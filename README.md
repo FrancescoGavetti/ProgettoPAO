@@ -28,14 +28,19 @@ Mediante richieste GET con rotte determinate, il client può richiedere determin
 
 ## UML
 ### Class Diagram
+Il diagramma delle classi fornisce una vista sulla struttura globale del progetto, rappresentando le varie classi e le interazioni tra le stesse.
+
 ![](classDiagram.png)
+
 ### Use Case Diagram
-Riporta le funzioni che l'applicazione mette a disposizione dell'utente.
+Il diagramma dei casi d'uso riporta le funzioni che l'applicazione mette a disposizione dell'utente.
+
 ![](useCaseDiagram.png)
 
 
 ### Sequence Diagram
-
+Il diagramma delle sequenze viene utilizzato per descrivere le azioni intese come successione di eventi. 
+Esso mostra le varie azioni compiute dall'utente e dal sistema quando viene richiesto un determinato servizio, mostrando tutte le interazioni tra i due e tra eventuali sotto-sistemi.
 * **getUsage()**
     
 ![](getUsageSequenceDiagram.png)

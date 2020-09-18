@@ -45,19 +45,19 @@ Esso mostra le varie azioni compiute dall'utente e dal sistema quando viene rich
     
 ![](getUsageSequenceDiagram.png)
     
-    Viene effettuata la richiesta GET al WebService e quest'ultimo effettua una richiestra POST all'API di Dropbox per richiedere l'utilizzo dati.
+   Viene effettuata la richiesta GET al WebService e quest'ultimo effettua una richiestra POST all'API di Dropbox per richiedere l'utilizzo dati.
 
 * **getAllFiles**
 
 ![](getAllFilesSequenceDiagram.png)
     
-    Viene effettuata la richiesta GET al WebService e quest'ultimo effettua una richiesta POST all'API di Dropbox per richiedere l'elenco di tutti i file e folder.
+   Viene effettuata la richiesta GET al WebService e quest'ultimo effettua una richiesta POST all'API di Dropbox per richiedere l'elenco di tutti i file e folder.
     
 * **getStatistics()**
 
 ![](getStatisticsSequenceDiagram.png)
     
-    Viene effettuata la richiesta GET al WebService e quest'ultimo effettua una richiesta POST all'API di Dropbox e l'oggetto restituito viene passato per poi istanziare la classe Statistic che calcola tutte le statistiche e le restituisce.
+   Viene effettuata la richiesta GET al WebService e quest'ultimo effettua una richiesta POST all'API di Dropbox e l'oggetto restituito viene passato per poi istanziare la classe Statistic che calcola tutte le statistiche e le restituisce.
 
 
 

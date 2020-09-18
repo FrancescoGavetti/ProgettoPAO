@@ -11,9 +11,9 @@ import java.util.List;
 
 public class Parser {
     /***
-     *
-     * @param obj
-     * @return
+     * Metodo statico per parsare i metadati restituiti da Dropbox API
+     * @param obj json da parsare
+     * @return Map oggetto che modella il json restiuito da Dropbox API
      */
     public static HashMap<String, List<File>> JsonToFile(JSONObject obj){
         HashMap<String, List<File>> map = new HashMap<String, List<File>>();

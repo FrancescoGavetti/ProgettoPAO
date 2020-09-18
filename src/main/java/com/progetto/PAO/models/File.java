@@ -92,6 +92,10 @@ public class File {
         this.path = path;
     }
 
+    /***
+     * Costruttore in grado di popolarmi la classe estraendo i valori da un json specifico
+     * @param obj json che rappresenta i metadati di un file
+     */
     public File(JSONObject obj) {
         try {
             this.tag = obj.getString(".tag");

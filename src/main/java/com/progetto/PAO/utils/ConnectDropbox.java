@@ -12,7 +12,7 @@ public class ConnectDropbox {
      * @param url l'url è importante per capire la tipologia di richiesta
      * @param method può essere POST o GET
      * @param token è la chiave univoca per accedere al mio account
-     * @param body !=null solo per richieste POST
+     * @param body ==null solo per richieste GET o POST senza body
      * @return un JSON contenente le informazioni fornite dall'API
      */
     public static JSONObject request(String url, String method, String token, String body){

@@ -10,7 +10,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Parser {
-
+    /***
+     *
+     * @param obj
+     * @return
+     */
     public static HashMap<String, List<File>> JsonToFile(JSONObject obj){
         HashMap<String, List<File>> map = new HashMap<String, List<File>>();
         try {

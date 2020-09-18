@@ -13,10 +13,10 @@ L'applicazione permette di richiedere mediante API REST (GET) con rotte distinte
 * Restituzione di statistiche sui dati (formato JSON) e in particolare statistiche sulle revisioni per singolo file con numero di revisioni giornaliere e settimanali e tempo medio tra le revisioni;
 
 ### Tecnologie utilizzate
-* GitHub: per versioning dell'applicazione;
-* SpringBoot:
-* JavaScript:
-* Postman:
+* GitHub
+* SpringBoot
+* JavaScript
+* Postman
 
 ## Funzionamento
 ### Avvio dell'applicazione

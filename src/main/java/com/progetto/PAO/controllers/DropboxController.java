@@ -16,8 +16,8 @@ import java.util.List;
 @RestController
 public class DropboxController {
     /***
-     *
-     * @return
+     * Metodo che restituisce informazioni sullo spazio utilizzato dall'account a cui si è acceduto.
+     * @return un JSONObject che riporta lo spazio totale utilizzato e lo spazio di allocazione dell'utente
      */
     @RequestMapping(value = "/usage", method = RequestMethod.GET, produces = "application/json")
     String getUsage() {
@@ -30,9 +30,9 @@ public class DropboxController {
     }
 
     /***
-     *
-     * @param tag
-     * @return
+     * Metodo che restituisce l'elenco di tutti i file a cui ha accesso l'utente
+     * @param tag chiave aggiuntiva che permette di "filtrare" i dati restituiti da Dropbox API
+     * @return un HashMap contenente le informazioni fornite da Dropbox API
      */
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
     HashMap<String, List<File>> getAllFiles(
@@ -63,8 +63,8 @@ public class DropboxController {
     }
 
     /***
-     *
-     * @return
+     * Metodo per richiedere le statistiche sui file
+     * @return una stringa
      */
     @RequestMapping(value = "/statistic", method = RequestMethod.GET, produces = "application/json")
     String getStatistics() {

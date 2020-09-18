@@ -30,18 +30,18 @@ Mediante richieste GET con rotte determinate, il client può richiedere determin
 
 ## UML
 ### Class Diagram
-
+   ![](classDiagram.png)
 ### Use Case Diagram
 Riporta le funzioni che l'applicazione mette a disposizione dell'utente.
 ### Activity Diagram
 
 ### Sequence Diagram
 * **getUsage()**
-
-* **getCount()**
+    ![](getUsageSequenceDiagram.png)
 
 * **getAllFiles**
-
+    ![](getAllFilesSequenceDiagram.png)
+    
 * **getStatistics()**
 
 

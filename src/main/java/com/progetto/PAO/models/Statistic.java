@@ -77,7 +77,7 @@ public class Statistic {
 
     /***
      * Costruttore in grado di calcolare e popolare le statistiche sulla size e il count delle estensioni
-     * @param list
+     * @param list lista di file
      */
     public Statistic(List<File> list) {
         this.list = list;

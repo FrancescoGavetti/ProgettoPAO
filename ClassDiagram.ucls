@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
-  realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.progetto.PAO.models.File" project="ProgettoPAO" 
+    file="/ProgettoPAO/src/main/java/com/progetto/PAO/models/File.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="551" width="309" x="763" y="458"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.progetto.PAO.utils.ConnectDropbox" project="ProgettoPAO" 
+    file="/ProgettoPAO/src/main/java/com/progetto/PAO/utils/ConnectDropbox.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="101" width="280" x="44" y="-43"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.progetto.PAO.PaoApplication" project="ProgettoPAO" 
+    file="/ProgettoPAO/src/main/java/com/progetto/PAO/PaoApplication.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="101" width="126" x="307" y="-220"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.progetto.PAO.controllers.DropboxController" project="ProgettoPAO" 
+    file="/ProgettoPAO/src/main/java/com/progetto/PAO/controllers/DropboxController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="137" width="277" x="737" y="-220"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.progetto.PAO.models.Statistic" project="ProgettoPAO" 
+    file="/ProgettoPAO/src/main/java/com/progetto/PAO/models/Statistic.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="461" width="333" x="364" y="-43"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.progetto.PAO.services.Parser" project="ProgettoPAO" 
+    file="/ProgettoPAO/src/main/java/com/progetto/PAO/services/Parser.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="101" width="314" x="737" y="-43"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="7">    
+    <bendpoint x="1081" y="-43"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="8">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <association id="9">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="10" name="list"/>      
+      <multiplicity id="11" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="12">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="13">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="14">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

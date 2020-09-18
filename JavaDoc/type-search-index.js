@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.progetto.PAO.utils","l":"ConnectDropbox"},{"p":"com.progetto.PAO.controllers","l":"DropboxController"},{"p":"com.progetto.PAO.models","l":"File"},{"p":"com.progetto.PAO","l":"PaoApplication"},{"p":"com.progetto.PAO.services","l":"Parser"},{"p":"com.progetto.PAO.models","l":"Statistic"}]

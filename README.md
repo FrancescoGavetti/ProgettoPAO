@@ -3,14 +3,14 @@
 
 L'applicazione presente nella repository, utilizzando le API (Application Programming Interface) di Dropbox, reperibili nell'apposita sezione di Dropbox dedicata agli sviluppatori (https://www.dropbox.com/developers/documentation/http/documentation), e mediante l'ausilio del framework SpringBoot, opera da Web Service.
 
-Un WebService rappresenta un'interfaccia attraverso la quale due dispositivi possono comunicare tra loro mediante l'utilizzo del protocollo HTTP.In particolare questo consente ai clienti che si collegano mediante apposite applicazioni (browser, Postman, ecc.) di usufruire di alcune funzioni messe a loro disposizione.
+Un WebService rappresenta un'interfaccia attraverso la quale due dispositivi possono comunicare tra loro mediante l'utilizzo del protocollo HTTP. In particolare questo consente ai clienti che si collegano mediante apposite applicazioni (in questo caso il browser) di usufruire di alcune funzioni messe a loro disposizione.
 
-La finalità del presente progetto è quella di accedere ad una cartella Dropbox privata, tramite l'utilizzo di una chiave di accesso (token), analizzare le revisioni dei singoli file contenuti in essa ed effettuare sugli stessi statistiche su numerosità e tempi medi.
+La finalità del presente progetto è quella di accedere ad un account Dropbox privato, tramite l'utilizzo di una chiave di accesso univoca (Bearer Token), analizzare le revisioni dei singoli file contenuti presenti ed effettuare sugli stessi alcune statistiche.
 
 L'applicazione permette di richiedere mediante API REST (GET) con rotte distinte:
 * Connessione al API;
-* Restituzione di dati (formato JSON);
-* Restituzione di statistiche sui dati (formato JSON) e in particolare statistiche sulle revisioni per singolo file con numero di revisioni giornaliere e settimanali e tempo medio tra le revisioni;
+* Restituzione dei dati (formato JSON);
+* Restituzione delle statistiche sui dati (formato JSON);
 
 ### Tecnologie utilizzate
 * GitHub
@@ -24,9 +24,7 @@ Una volta lanciata l'applicazione all'interno di un ambiente di sviluppo (Intell
 ### Richieste
 Mediante richieste GET con rotte determinate, il client può richiedere determinati dati o statistiche.
 
-* **Restituzione dei dati**:
-
-* **Possibili statistiche**:
+![](Rotte.png)
 
 ## UML
 ### Class Diagram

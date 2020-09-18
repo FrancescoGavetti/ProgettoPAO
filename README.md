@@ -34,6 +34,8 @@ Mediante richieste GET con rotte determinate, il client può richiedere determin
 ### Use Case Diagram
 Riporta le funzioni che l'applicazione mette a disposizione dell'utente.
 ![](useCaseDiagram.png)
+
+
 ### Sequence Diagram
 
 * **getUsage()**
